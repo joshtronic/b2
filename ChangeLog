@@ -1,0 +1,292 @@
+B Squared (b^2) ChangeLog
+~~~~~~~~~~~~~~~~~~~~~~~~~
+19-Oct-2003:  0.6.3 Released Today!
+              The b^2 project has been suspended indefinately by myself, 
+              although other people have been developing and advancing the
+              software.  On that note, 0.6.3 is a license update.  b^2 is now
+              being distributed under the GNU GPL 
+              (http://www.gnu.org/licenses/gpl.html) to allow any new 
+              development to continue, and be distributed.
+
+25-Sep-2002:  0.6.1 & 0.6.2 Released Today!!!
+              Resolved an issue with the profiles that wouldn't allow the use
+              of double quotes (""), and the Yahoo! Pager name wasn't being
+              recored in the database either.  The installer was broken, so I
+              fixed it (a couple times) and released another version today.
+
+24-Sep-2002:  It was a bug fixing extravaganza!!  Fixed a problem with the
+              profile images (bad URL resulted in some errors).  Fixed a lone
+              undefined index on the scheme admin.  Fixed the post thread and
+              reply pages to filter HTML differently, and not result in lost
+              data.  Fixed the registration so it won't allow user's to use the
+              &nbsp; character in a username.  Fixed it so that you can have no
+              schemes without having it go to a crazy color scheme.  Removed
+              the Message Admin and made the TOS and FAQ flat files (they are
+              in the ./language directory, so they can be translated later on
+              when the language pack support is fully complete).
+
+23-Sep-2002:  Was offered $500 bucks for the "rights" to b^2... I declined.
+
+21-Sep-2002:  Changed some of the verbage on the view_forums page, and added a
+              timestamp on the right side of the page.
+
+19-Sep-2002:  Set the title of the pages to reflect the board name, and which
+              version of b^2 it is running, instead of just "[ Forum ]".
+
+18-Sep-2002:  Added a function to email the admin with an error.  At the moment
+              it only emails the admin on MySQL errors, and the options aren't
+              built into the installer yet.
+
+17-Sep-2002:  Started implementing language packs to the board.  This will allow
+              people to run the board in languages other than English.  The
+              first thing to be migrated over is the installer, which is almost
+              complete.
+
+16-Sep-2002:  0.6.0 Released Today!!!
+              Fixed a problem when there are no moderators for a forum, it was
+              displaying errors instead of "--".
+
+15-Sep-2002:  Fixed up the installer so it will let you download the config.php
+              file with E_ALL on in the php.ini file.
+
+14-Sep-2002:  Tweaked out some more issues with b^2 generating notices, and
+              errors.
+
+13-Sep-2002:  Fixed a boat load of issues when running b^2 on Windows 2000.  The
+              issue turns out to be more of a PHP issue than anything.  If you
+              have PHP set to issues all warnings and notices, then b^2 was
+              having a lot of issues.  Now most (if not all) of those issues
+              have been fixed.  Added a function to allow the easy retrieval of
+              values from the super globals.
+
+12-Sep-2002:  Same ol', same ol'.  Got the optimization done (well the portion
+              I was working on), alond with the documentation audit.  Discovered
+              some problems with installing b^2 on a Windows system (of course).
+              More specifically, Windows NT/2000, running IIS, with the latest
+              versions of PHP and MySQL.  I hope to have that resolved by the
+              time 0.6.0 is ready to release.
+
+11-Sep-2002:  Continued to do housecleaning on the existing code, and re-
+              commenting parts of it.  Should be ready to go by tomorrow.
+
+09-Sep-2002:  Started optimizing my over-use of the echo command.  And the
+              people rejoiced!  Also, have been skimming the comments and 
+              making sure they are accurate, and all that good stuff.  And the
+              people rejoiced, again.
+
+06-Sep-2002:  BETA-0.6.0 Released Today!!!
+              Added table prefixes when installing, along with a few other new
+              fields on the installation screen.  There is form validation when
+              installing, and errors will be more descriptive (admin errors, not
+              generic user error messages).  Quite a few miscellaneous bug fixes
+              on top of everything else.  All the database calls have been 
+              optimized, along with the error trapping (unless I overlooked
+              something).  The installer now prompts the user to download the 
+              config.php file if the script doesn't have permission to write to
+              the file.  I was a bit disappointed with the original installer
+              from 0.5.0, hence the early beta release of 0.6.0.  I felt the
+              amount of code changes warrented the beta release, as opposed to
+              version 0.5.1.
+
+05-Sep-2002:  Continued my blitzkreig of code changes, most specifically,
+              optimizing the database calls, and adding secure error trapping. 
+
+04-Sep-2002:  Figured out the permissions problem when installing, the entire
+              folder needs to have public write permission.  chmod 777 dir, then
+              attempt to install, and everything works perfectly.  Started to 
+              optimize / lock down the code for b^2.  I'm going through and
+              adding error trapping, so the users will never interact with any
+              technical error messages (which can pose a security risk).  Also
+              added a function for doing database queries, and have been adding
+              the static database variables to constants, instead of strings.
+
+03-Sep-2002:  0.5.0 Released Today!!!
+              Fixed a problem with the schemes, now if there are no active 
+              schemes, the first scheme in the database will be set as the 
+              active one (typically default).  Built the installer, which is 
+              about 90% functional.  This means you can install the board, but 
+              you have to make sure that the install.php file has the proper 
+              permissions (chmod 666 install.php).  The script is lacking form 
+              validation, and advanced error checking, which will allow a user 
+              to download the config file if the script doesn't have the right 
+              permissions.  Development (unstable) version 0.5.0 is being 
+              packed up and shipped off to Freshmeat.net for it's initial 
+              release.
+
+02-Sep-2002:  Completed the scheme admin, with form checking and the like.  
+              Added the General Admin section for updating the name of the 
+              board, and the title image.  Fixed some bugs, and planned out the 
+              installation process.  Now there is a config.php file that holds 
+              the MySQL variables, along with the 'INSTALLED' global variable
+              which tells the script if it needs to run the installed or not.
+
+28-Aug-2002:  Added the scheme admin.  Changed the database slightly to include 
+              a new table for board properties (title, title image, et cetera). 
+              This is now a separate section from the schemes, which are fully
+              operational now.  Was advised this evening, by one of the people
+              stress testing the board, that their attempted buffer overruns
+              resulted in lagging on their end.
+
+27-Aug-2002:  Finished implementing changes to use customizable values for the 
+              overall look and feel of the board.
+
+26-Aug-2002:  Added more board properties to the database, 10 in all.  The board
+              is pulling some of the properties from the database to generate 
+              the page.  Ended up killing the properties table, and creating a 
+              schemes table which holds all of the customizable information.  
+              Started implementing system wide changes to accomodate.
+
+24-Aug-2002:  Administrators now have the ability to add / remove moderators 
+              and administrators, along with editting "messages" which is a new
+              table in the database as well.  There are currently two messages, 
+              Terms of Service, and FAQ, both of which can be customized by the
+              board owner.  Fixed a problem with the KeepSafe function for 
+              securing the board.
+
+23-Aug-2002:  Added tag and escape character stripping on the forum admin. 
+              Added a confirmation script for use with such things as the delete
+              function on the forum admin.  Changed up the logo slightly as 
+              well.  Fixed an error on the registration page that was 
+              prohibiting new users to sign up.  Added user administration tools
+              that allow administrators to edit all the user's profiles.
+
+22-Aug-2002:  Changed the title logo again.  The new logo, IMHO, is the best
+              one thus far.  Fully implemented the forum admin, allowing for the
+              addition, removal, and modification of forums.  The forum admin
+              is lacking input parsing which at the moment is leaving it a bit
+              insecure, and messy, since it still posts \' and \".
+
+21-Aug-2002:  Fixed a hole in the profile system, for editting and viewing.
+              Added folder icons for the thread listing, four in all.  New
+              threads, old threads, hot threads, and today's hot threads.  
+              Fixed a problem with the page id's, should be the last time 
+              anyone gets to see the internal path.  Added a bit more
+              differentiation between the overlapping moderator and admin
+              tools.  Now if a moderator / admin removed a thread, they will
+              redirected to the thread, and not the forum list.  Deleting an
+              entire thread redirects to the forum the thread was in, and not
+              the forum list.  Finished adding the add signature by default
+              options.  New users will be able to specify if they want to
+              include their signature on new posts or not.  This can be updated
+              any time via the profile editor.  Began adding administrative
+              links across the top menu, which resulted in a problem with the
+              login script, which was correct (user's weren't being verified 
+              correctly upon login).  Implemented the forum order column in the
+              database, hence the new order.  Began adding the forum editor for
+              administrators, allowing them to add new forums, delete and
+              modify existing ones.  Fixed a bug that caused the view replies
+              page to freak out if a user was an administrator, but not a
+              moderator.
+
+20-Aug-2002:  Fixed some holes in the user verification portion of the code
+              would allow any user to circumvent passworded areas and do things
+              like post messages without having accounts, and possibly pose as
+              existing users.  Added IP logging on all posts, which are only
+              visible by the moderators for that particular forum.  Also began
+              implementing moderator tools.  Right now, a moderator can delete
+              an entire thread, or just certain replies to that thread. Added
+              the administrators table to the database, and functionality so 
+              that an admin can delete threads / replies on any forum, 
+              regardless of their moderator status for that forum.
+
+19-Aug-2002:  There were a couple of random fixes over the weekend, but nothing
+              too important.  Today the user's table was modified to include
+              a column that signifies if the user wants to add their signature
+              to new messages by default.  There is currently no functionality
+              to set this value when registering a new account, or via the
+              profile editor.  Also modified the date format on replies.
+
+16-Aug-2002:  Changed up the view threads page a bit, made the location and 
+              new thread links on the same line.  Tweaked some of the table
+              attributes, and fixed some bugs with the moderator list, and the
+              last post for a forum.  Shortened the max length for thread titles
+              from 128 characters, down to 64.  Added more signature 
+              functionality; now you get the choice weather or not you want the 
+              signature to be added to the end of your message, but you will 
+              only get the option if you have a prexisting signature in the 
+              database (might end up giving people without signatures the 
+              opportunity to set one up, without loosing the message they were 
+              about to post).  Fixed the double signature problem as well.
+
+15-Aug-2002:  New logo / header / banner / image added today.  Again, nothing
+              too fancy, I was a bit tired of the last image.  Now the main page
+              displays the latest post time and user for each forum, and links
+              all of the usernames to the profiles.  Fixed a problem with the 
+              signatures, it was pulling the newest user's signature, instead of
+              the correct signature for the user.  Now when previewing a new
+              post, you are shown your signature along with your message.
+
+14-Aug-2002:  Added more functionality when editting a profile when an image
+              is involved.  Also added a view profiles page that will display
+              a user's profile, if they are real users, users not in the 
+              database will generate an error and alert the user.
+
+13-Aug-2002:  Patched the bug in the view thread and reply pages that allowed
+              a user to crash the script and reveal the path.  Added signatures
+              to the user's profile, that auto-populate when the user posts a 
+              new thread or reply.  Corrected a flaw when editting the
+              submitted information when registering, it wasn't carrying over
+              the "AOL Instant Messenger" field.  Users can now access their 
+              profile, and edit the information in it.
+
+12-Aug-2002:  Updated the registration and login code to support encrypted
+              passwords.  The passwords are encrypted via the crypt() function
+              with a random salt.  Added more checking to posting messages and
+              registering a new account.  Justin pointed out that you can post 
+              empty messages just by putting a space in the field.  When posting
+              a new thread, or a reply, the HTML special characters are
+              converted, which in turn eliminates the sight of \" and the like.
+              All HTML is ignored with the exception of <BR>, only because the
+              board supports people posting line breaks in their messages.
+              Adding support for when there aren't any threads in a selected
+              forum and added a moderator listing on the view forums page, even
+              though there aren't any moderator functions yet.
+
+11-Aug-2002:  Updated the database schemas (wiped all the existing data and
+              started fresh), this included tweaking some of the tables, and 
+              adding a moderators table, for when I implement forum moderators.
+              When registering, users are prompted for more information, which 
+              is shown when they post.  The registration form needs some work to
+              ensure that people aren't trying to feed false information via the
+              querystring.  Fixed a problem with the determining the total 
+              number of posts. 
+
+10-Aug-2002:  Updated a lot of the variable calls to comply with the new PHP 
+              setting of register_globals being off.  Added some new code to the
+              post thread and post reply pages to make sure the user isn't 
+              feeding bad information via the querystring.  When someone 
+              registers a new account, they will be forwarded back to the main 
+              page (forum list) and have the option to automatically log in from
+              that page (thanks Matt!).  When registering, the password is no 
+              longer shown in plain text, and it must be at least 6 characters 
+              long.
+
+09-Aug-2002:  Added some directory security to the system.  Now if a user tries 
+              to call any of the directories in the structure, other than root, 
+              it will redirect them to the main page.  If the user attempts to 
+              call any of the files directly, other than index.php they will be 
+              redirected home as well.  JavaScript form validation has been 
+              added to the post thread and reply forms, as well as code to make
+              sure someone isn't trying to feed the form data via the 
+              querystring.
+
+08-Aug-2002:  Not only can user's sign up for an account, they can log in now
+              too!  The login is working, but will need to be tweaked for 
+              security purposes, plus most of the code built into the index.php
+              will be added into the include file as a function.  Users can now
+              post new threads to the forums, as well as reply to existing
+              threads.  Fixed the problem with the forum list reporting the
+              wrong number of posts.
+
+07-Aug-2002:  Threw together a quick little banner / logo.  Built out the page
+              to allow a user to sign up for an account.  The page checks the
+              input from the user and all that good stuff, detecting malformed
+              requests (i.e. hack attempts) and blocks them.  Registration only
+              requires minimal information (username, password, email address)
+              but will be expanded to support a full profile.  Users can now set
+              up an account, but there are no actions for them yet.
+
+06-Aug-2002:  Built out the database tables for the users, forums, threads, and
+              replies.  Set up the directory structure. Built the index page, 
+              along with the content pages to show the forum list, thread list, 
+              and replies.

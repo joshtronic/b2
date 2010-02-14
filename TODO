@@ -1,0 +1,20 @@
+B Squared (b^2) TODO - Last Updated October 19th, 2003
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+add multi language support
+emoticons!
+add code to email the admin if there's a problem.
+
+add number of posts in the forum admin
+add javascript form validation on the admin sections
+update the email validation to allow emails with weird TLDs
+Password recovery utility
+Search
+Add post options to the bottom of the pages
+add forum jumped to the bottom of the pages
+create a post nuke module for b^2
+support for PostgreSQL, MSSQL and flatfiles
+
+If you have any suggestions, please don't email me, as I am no longer tending to 
+this project.  You are more than welcome to integrate your own features, and 
+possibly resolve the issues already on this list.  Cheers!
+

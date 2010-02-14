@@ -1,0 +1,25 @@
+A
+  {
+    color: #000000;
+  }
+
+A:hover
+  {
+    text-decoration: none;
+  }
+
+INPUT
+  {
+    font-family: Verdana;
+    font-size:   9pt;
+  }
+
+.table_header
+  {
+    color: #FFFFFF;
+  }
+
+.table_header:hover
+  {
+    text-decoration: none;
+  }

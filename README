@@ -1,0 +1,108 @@
+THANKS FOR DOWNLOADING b^2:
+
+The software is fairly new to the internet, so if you have any questions, email
+me directly at josh@cleancode.org, that way I can compile a list of commonly
+asked questions, and make this file a bit more robust.
+
+Also, if you are running Windows... sorry, the instructions are geared towards 
+the Linux OS, which b^2 was developed on.  The steps you need to take are about
+the same, but the syntax is a bit different, hopefully you'll be able to cope
+with it.  If anyone wants to write up some Windows directions, maybe I'll
+include them with the next release.
+
+
+INSTALLTION:
+
+Installation is pretty simple, first you will need to set up a database for b^2
+to use, that can be done with the following commands:
+
+  bash$ mysql -u username -p
+
+Put your MySQL username in place of 'username' and type your password when
+prompted.  Now that you are logged into the MySQL server, you will need to
+create your database, like so:
+
+  mysql> CREATE DATABASE db_name;
+
+The db_name should be the name you want to call the database, I typically use
+'b2' for my database name.
+
+Then put the b2-version.tar.gz file on your web server, and extract it like so:
+
+  bash$ tar -xzvf b2-version.tar.gz
+
+where 'version' is the version you have (i.e. b2-0.6.0.tar.gz)
+
+Next, you need to (optionally) change the permissions of the folder you are
+installing b^2 to.  Do so like this:
+
+  bash$ chmod 777 b2-version
+
+This step is now optional, but doing it this way is recommended, and a bit
+easier in the long run.  Once the permissions are set appropriately, move
+into the directory:
+
+  bash$ cd b2-version
+
+Now that we have the installation script ready to rock, all you will need to do
+is go to the URL for the bulletin board (i.e. http://yoursite.com/b2-version/),
+and you should be immediately presented with the installation script.  Simply
+fill out the form (in it's entirety) and click the install button.
+
+The script should install correctly (assuming you gave it the right information
+for your MySQL database) and you will be ready to go!
+
+If you didn't give the script directory the right permissions, you will be
+given the opportunity to download the 'config.php' file which will need to be
+placed in the directory you installed b^2.
+
+If you did give the directory the right permissions, then I recommend changing
+them back once the installation is complete:
+
+  bash$ chmod 775 b2-version
+
+The last step is to check the permissions on the 'config.php' file.  If you
+downloaded the file and placed it in the directory, then it probably doesn't
+have the right permissions, it will need to have read access on it.  Just to
+make sure, run the following:
+
+  bash$ chmod 644 config.php
+  bash$ chown nobody config.php
+  
+Change 'nobody' to whatever username you need the files to be owned by, some 
+boxes are different than others, just make sure all the files are owned by the
+same username.
+
+That's it, if you'd like (I'd appreciate it as well), email me once you get
+the board up and running.  It's always makes my day to see something I wrote
+in action.  On top of that, I'd like to compile a list of sites using the
+script to post on the b^2 site (http://www.cleancode.org/b2/)
+
+Enjoy!
+
+
+FREQUENTLY ASKED QUESTIONS:
+
+Q:  How do I add moderators to my forums?
+
+A:  Moderator and administrator privileges are added via the "User Admin"
+    section of the site.  Find the user you want to make a moderator, and
+    proceed to edit their profile.  At the bottom you will see check boxes
+    that correspond with your forums, and one for admin rights.  Check the
+    ones that apply, then submit (remember, you have to confirm it first)
+    the profile.  The user should now be listed as a moderator for the
+    selected forums.
+    
+Q:  What can a moderator do?
+
+A:  Moderators have the ability to delete threads and posts from a forum,
+    and see the poster's IP address.  This will change over time, as new 
+    abilities are coded in.  Eventually, moderators will be able to edit
+    posts (so will the person who posted it), and ban certain users from
+    posting to a forum.
+
+Q:  Can I redistribute my hax0red version of b^2?
+
+A:  Yes, yes you can.  If you have any other questions concerning
+    distribution and such, visit the GNU Genereal Public License site:
+    http://www.gnu.org/licenses/gpl.html
